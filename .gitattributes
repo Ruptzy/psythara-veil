@@ -1,0 +1,3 @@
+# Never convert line endings. The console is one 14 MB HTML file --
+# CRLF/LF rewriting would produce whole-file diffs on every sync.
+* -text
