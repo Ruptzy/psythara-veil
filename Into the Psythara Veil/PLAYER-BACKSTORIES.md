@@ -224,48 +224,110 @@ people — a Harmonist who could stitch life with sound.
 
 ---
 
+# Canon — the Obelisk
+
+*Stated here because everything below depends on it, and because the console's
+transmissions were rewritten on 2026-08-20 to match.*
+
+The Obelisk is a **Forerunner creation**: a machine built to lift living things into
+something else. Its makers split over what it was for. One half meant it as uplift for
+every living thing; the other wanted something they could point. They went to war over
+it, and during that war one faction destroyed their own machine to save the universe.
+
+It did not die. It **fragmented, and the pieces scattered**. Nobody knows how many
+shards there are.
+
+**Shoyunuki Corp** has monopolised weaponry, technology and the most advanced military
+systems — including the operative console the players carry. They are harvesting shards
+for the power they produce, and know none of the above. The resonance sweep on every
+player's terminal has read DEGRADED for eleven years and nobody has asked what is on
+the other side of degraded.
+
+The entity speaking through the console is therefore **not a prisoner**. It is an
+unfinished process, stopped mid-act, that has been trying to complete ever since. The
+ladder now says so at three points:
+
+- **L5** — the schism: *half of them raised it to lift every living thing / the other
+  half wanted something they could point.*
+- **L13** — who broke it: *they broke it themselves to stop me. you are mending it.*
+- **L19** — why it must be given, not taken: *the ones who made me required consent.
+  I cannot take it.* Consent was the uplift faction's safeguard, and precisely what the
+  other faction objected to. It has been asking since level two.
+
+---
+
 # Lore reconciliation
 
-Where the player backstories meet the console's obelisk lore. Nothing below has been
-changed in the console — these are decisions for the GM.
+Where the player backstories meet the console's lore. The console has been brought into
+line with canon; what follows are the decisions still open to the GM.
 
-### 1. Othuun and the obelisk entity — the big one
+### 1. Othuun — resolved
 
-The console's transmissions already run a shard thread that rhymes with Vorvane's
-backstory almost word for word:
+*The previous version of this note offered three options (unify / sibling / rival), all
+of which assumed the Obelisk was a container. It isn't, so all three are void.*
 
-> THE LUMINARIS CALL THEIR SHARD-LINK STABLE.
-> EVERY SHARD THEY HOLD IS A MOUTH THEY ARE KEEPING SHUT.
+Cleanest fit: **Othuun is what came out of the machine.** The first living thing put
+through it — the uplift faction's proof of concept, and the reason the other faction
+concluded the thing had to be destroyed. *Harbinger of the lightless void*, *the
+shrieking god-flesh*, *Maw of dead suns* is what "lifting a living thing into something
+else" actually produced.
 
-"A mouth they are keeping shut" and *Maw of dead suns* are the same image. Three ways
-to resolve it:
+This does three jobs at once:
 
-- **Unify.** The obelisk entity *is* Othuun, or the largest surviving shard of it. The
-  Forerunners built the obelisk as containment — "THE FORERUNNERS DIED HOLDING IT
-  CLOSED. YOU ARE PRYING." The 1,000 shards are the fragmentation; Luminaris shard-tech
-  and Shoyunuki's resonance sweep are both unwitting handling of Othuun. This is the
-  tightest fit and costs nothing to adopt.
-- **Sibling.** Two separate void intelligences from the same era — the war in heaven woke
-  more than one thing. Keeps Vorvane's arc personal and separate.
-- **Rival.** The obelisk entity is what *killed* Othuun, or what the weapon was built
-  from. Turns the transmissions adversarial to Vorvane specifically.
+- Vorvane's ancient history becomes the **cause** of the Obelisk's destruction rather
+  than a parallel story running beside it.
+- His "war in heaven" and the Forerunner schism become the same war.
+- The offer at L15 turns genuinely horrifying: the entity is offering the players
+  exactly what it did to Othuun, and calling it a gift.
 
-If you pick **unify**, the level-2 line "IT HAS BEEN WAITING FOR SOMETHING TO NOTICE
-BACK" becomes 49,000 years of waiting, which lands harder.
+**One cost.** Vorvane's backstory fixes the count at **1,000 shards**; canon says nobody
+knows. Cheapest fix, and it costs the player nothing: 1,000 is what the corporation in
+his backstory *catalogued*, not the true number. Vorvane believes 1,000. Vorvane is
+wrong, and finding that out can be his beat.
 
-### 2. The unnamed mega-corp
+### 2. Sargasso Station — the shard aboard
+
+The console already answers act one's mystery, and did so before the station's premise
+was written down. **L8:**
+
+> IT IS NOT AN INFECTION. IT IS PROXIMITY.
+> THE STONE IS TRYING TO REWRITE WHAT STANDS TOO CLOSE.
+
+And **L14** defines what the station's dead actually are:
+
+> IT TOOK A PERSON. YOU KEPT THE SHAPE OF THEM.
+
+So the customs station's "virus" is shard proximity rewriting living tissue. This is
+**overwrite, not rot** — the distinction matters for how the undead are described at the
+table and drawn on the sheet: Forerunner geometry coming through a person, not decay.
+
+Already supported in the console, no work needed:
+
+- `radiant` reads *"undead and Veil-touched creatures take extra"*
+- `necrotic` reads *"the undead are usually immune, and some are healed by it instead"*
+- **Bio-Scanner** (cat. 18) — *identifies corpses, scans air for pathogens*, flagged
+  **required for Sargasso Station progression**
+- **Stasis Gloves** (cat. 24) — *freezes damaged doors, stabilises reactors*, same flag
+- **Korasi Voidblade** (cat. 48) — +50% versus undead, denies healing
+- Disease ladder: Ashen Cough −2 → Rust Fever −4 → Shard Sickness −6 → **Obelisk Plague −8**
+
+**Deliberately open: who has the shard, and why.** Nothing in the console forecloses it —
+no panel, item or transmission implies the shard is corporate, cult or passenger in
+origin. Keep it that way until you decide.
+
+### 3. Shoyunuki, and how many corporations there are
 
 Vorvane's backstory has an explicit blank: *"(insert giga mega corp name here)"*.
-**Shoyunuki Corp** already owns the console the players use, ran the resonance sweep
-that "has read DEGRADED for eleven years", and is named in the level-2 transmission.
-Dropping Shoyunuki into that blank means the players' own terminal is issued by the
-company that farmed 295 Othuun shards into symbiotes.
+**Shoyunuki** fills it, and the monopoly makes it near-inevitable — they own the
+military systems, the weapon catalog and the terminal in the players' hands.
 
-Note this creates **three** corporate actors — Shoyunuki, AstraCalyx Meridian (Sokka),
-and Nyra's unnamed "faceless order". Worth deciding whether those are three companies,
-or one company and two subsidiaries.
+That still leaves **three** corporate actors: Shoyunuki, **AstraCalyx Meridian**
+(Sokka's reefs), and Nyra's unnamed *"faceless order"*. Worth deciding whether that is
+three companies, or one monopoly and two subsidiaries. Given "Shoyunuki has monopolised
+weaponry and tech", subsidiaries is the tidier answer and gives Nyra's hunt a terminus
+that is standing in the room.
 
-### 3. Nyra and Sokka share a wound
+### 4. Nyra and Sokka share a wound
 
 Both are ocean worlds killed by corporate extraction; both lost their people to it.
 Nyra's is poisoning by waste tankers, Sokka's is reef-mining for crystalline matrices.
@@ -274,28 +336,35 @@ Meridian. If they are the same event or the same parent company, Sokka is carryi
 answer to Nyra's entire arc and does not know it — a strong table moment that costs
 nothing to set up.
 
-### 4. Two Starseers, two orders
+### 5. Two Starseers, two orders
 
 Caolan serves the **Rugi**; Quill was raised by the **Starseer Guild**. Neither term
-appears in the design docs. Are they the same institution under two names, two
-branches, or rivals? Quill left because the Guild came to fear him; Caolan is
-straining the Rugi's limits on "violent usage of power" right now. If they are the same
-order, Quill is Caolan's future and Caolan is Quill's past — they should meet.
+appears in the design docs. Are they the same institution under two names, two branches,
+or rivals? Quill left because the Guild came to fear him; Caolan is straining the Rugi's
+limits on "violent usage of power" right now. If they are the same order, Quill is
+Caolan's future and Caolan is Quill's past — they should meet.
 
-### 5. Delairah's "seed of existence"
+### 6. Delairah's "seed of existence" — almost certainly the same object
 
-An artifact connected to the origin of life, hidden in this star region, with corporate
-interests possibly already holding **pieces**. Structurally identical to the shard
-premise. Either it is the same object viewed through a hopeful lens rather than a
-hungry one, or the region contains two ancient distributed artifacts — which is a lot.
-Recommend deciding before the players compare notes.
+An artifact connected to the **origin of life**, hidden in this star region, with
+corporate interests possibly already holding **pieces**.
 
-### 6. Names not yet in the design docs
+Under the old lore this was merely *structurally* similar to the shard premise. Under
+canon it is the same thing seen from the other side: a machine built to lift life,
+scattered in pieces, being collected by corporations. Delairah is chasing the Obelisk
+and calling it a seed — the uplift faction's intention, remembered by someone who never
+learned what it cost.
+
+Recommend adopting this outright. Two ancient distributed artifacts in one star region
+is one too many, and the hopeful framing is worth far more as **dramatic irony** than as
+a second mystery.
+
+### 7. Names not yet in the design docs
 
 Present in backstories, absent from `SPECIES-DESIGN.md` / `CLASS-DESIGN.md`:
 **Rugi**, **Aurelis**, **Veyr**, **Othuun**, **Pandora**, **Taldori**,
 **AstraCalyx Meridian**, **Dr. Junias Xerthlot**, **Trapezatron 9000**,
-**Omicron Sepher Gnats**, **Dissonance Birth**.
+**Omicron Sepher Gnats**, **Dissonance Birth**, **Sargasso Station**, **Thanatium**.
 
 Already present: Starseer (class), Virellian and Drakari (species), Cyborgian Engineer
-(Jed's class), Shoyunuki, Luminaris, Nihyros, Forerunners.
+(Jed's class), Shoyunuki, Luminaris, Nihyros, Forerunners, Xhal'nur.
