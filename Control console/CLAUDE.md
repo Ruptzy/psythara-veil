@@ -29,12 +29,14 @@ adjudicates enemies, positioning and cover.
 - One physical item grants its passive once (`oncePer` dedupe) and wears once
   per cycle (`myEquipped` dedupe), however many slots reference it.
 - Every message goes through `toast()` (session log taps it); every damage
-  through `takeDamage()`; every knock through `syncKnocked()`.
+  through `takeDamage()`; every knock through `syncKnocked()`; every temp HP
+  grant through `grantTemp()` — which asks for a duration if none is given.
+  Temp HP is one pool with one timer (`hp.tempRounds`); it fades at End Round.
 
 ## Verification
 
 Headless Chrome probes: scratchpad `runprobe.py <probe.js>` injects a script
-that reports via `document.title`. Eleven suites, 173 checks, including
+that reports via `document.title`. Twelve suites, 192 checks, including
 sabotage tests that inject drift and assert the audit catches it, and a
 stress fuzzer (probe189) that hammers every funnel with garbage, fires every
 special, buys every node, tries every species x class, and round-trips a save
