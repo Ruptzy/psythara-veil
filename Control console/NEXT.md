@@ -47,20 +47,20 @@ drawn against the live numbers, not remembered ones. Text-side work left:
 a read-through of the 28 sections against the engine — the audit covers
 cards, not manual prose, so this one is by eye.
 
-## 3. Familiars  (your third ask)
+## 3. Familiars  — built 2026-08-23
 
-What exists: a familiar has its own sheet — HP, scores, conditions,
-abilities — runs on the same engine, and can be handed your stims.
+`FAMILIAR_TEMPLATES` exists; "Add Familiar" opens a picker. Psyloris
+(Astra-maki) is fully automated: attack rolls with advantage/disadvantage from
+its conditions, crit-armed typed damage with the rider DC for the DM, Synaptic
+Cascade with a real recharge roll at End Round, resistances applied by damage
+type, the Ethereal Jaunt toggle, timed temp HP. The card is generated from the
+payload, so there is no stat-block prose to drift.
 
-What "add familiars" could mean; pick the ones you want:
-- **More familiar types** — a roster of templates (drone, beast, construct,
-  bound spirit) with their own ability sets and growth.
-- **Familiar progression** — levels or a small tree, tied to yours.
-- **Familiar temp HP** — `grantTemp()` is wired for characters only;
-  familiars still add temp HP untimed. Small, worth doing first.
-- **Familiar equipment** — slots, or a single mod socket.
-- **Audit coverage** — familiar abilities are not an `AUDIT_SPECS` entry
-  yet. One line once their shape settles.
+Still to do:
+- **FIDO** has four portraits in `Sargasso Station/Familiars/` and no stat
+  block anywhere on disk. Paste its block and it is one row in the registry.
+- Any other familiar in the campaign, the same way.
+- **Familiar progression** (levels or a small tree tied to yours) if wanted.
 
 ## 4. Small things already known
 
