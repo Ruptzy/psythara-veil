@@ -67,6 +67,8 @@ Levelling up holds the screen with an acknowledge.
 Still to do:
 - **Level-up art.** The notice shows ART PLATE TO FOLLOW; set
   `FAM_LEVELUP_ART` to the image's data URL and it paints. (Harold is making it.)
+- **Clank** (catalog #10) is in, with its own ladder — Patch Kit, Overclock,
+  Targeting Uplink, Emergency Shield, Failsafe Core.
 - **FIDO** has four portraits in `Sargasso Station/Familiars/` and no stat
   block anywhere on disk. Paste its block and it is one row in the registry —
   give it `unlocks[]` for its own ladder.
