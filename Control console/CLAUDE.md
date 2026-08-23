@@ -15,6 +15,8 @@ adjudicates enemies, positioning and cover.
 | new structural invariant | `AUDIT_RULES` |
 | new glossary term | `GLOSSARY` — the audit guards duplicate keys and aliases |
 | new familiar | `FAMILIAR_TEMPLATES` — one row; the picker, card, attacks, specials, recharge and resistances all derive from it |
+| familiar levels / a new unlock | the template's `lvl` and `unlocks[]`; `famView()` derives every number from the level — never type a bonus or DC |
+| familiar level-up art | `FAM_LEVELUP_ART` (a data URL) |
 
 ## Rules that keep it honest
 
@@ -50,7 +52,7 @@ Write tool.
 ## Verification
 
 Headless Chrome probes: scratchpad `runprobe.py <probe.js>` injects a script
-that reports via `document.title`. Thirteen suites, 213 checks, including
+that reports via `document.title`. Fifteen suites, 242 checks, including
 sabotage tests that inject drift and assert the audit catches it; a stress
 fuzzer (probe189) that hammers every funnel with garbage, fires every special,
 buys every node, tries every species x class, and round-trips a save —

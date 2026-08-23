@@ -56,11 +56,21 @@ Cascade with a real recharge roll at End Round, resistances applied by damage
 type, the Ethereal Jaunt toggle, timed temp HP. The card is generated from the
 payload, so there is no stat-block prose to drift.
 
+Progression is in: XP typed on the card, level N costs N x 25 (cap 10, so
+1,350 to cap against an operative's 21,000). Everything derives from the level
+in `famView()` — proficiency, attack bonus, DCs, saves, skills, HP, growing
+dice, ASIs — and the template's `unlocks[]` rows add traits and specials at
+their level, each automated (Mindward buffs YOUR sheet, Cosmic Insight restores
+YOUR Focus, Phase Pounce reads the Ethereal toggle, Star-Born holds at 1).
+Levelling up holds the screen with an acknowledge.
+
 Still to do:
+- **Level-up art.** The notice shows ART PLATE TO FOLLOW; set
+  `FAM_LEVELUP_ART` to the image's data URL and it paints. (Harold is making it.)
 - **FIDO** has four portraits in `Sargasso Station/Familiars/` and no stat
-  block anywhere on disk. Paste its block and it is one row in the registry.
+  block anywhere on disk. Paste its block and it is one row in the registry —
+  give it `unlocks[]` for its own ladder.
 - Any other familiar in the campaign, the same way.
-- **Familiar progression** (levels or a small tree tied to yours) if wanted.
 
 ## 4. Small things already known
 
