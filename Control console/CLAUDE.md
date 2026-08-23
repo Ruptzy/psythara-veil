@@ -34,6 +34,10 @@ adjudicates enemies, positioning and cover.
 ## Verification
 
 Headless Chrome probes: scratchpad `runprobe.py <probe.js>` injects a script
-that reports via `document.title`. Nine suites, 156 checks, including sabotage
-tests that inject drift and assert the audit catches it. Screenshots need
+that reports via `document.title`. Eleven suites, 173 checks, including
+sabotage tests that inject drift and assert the audit catches it, and a
+stress fuzzer (probe189) that hammers every funnel with garbage, fires every
+special, buys every node, tries every species x class, and round-trips a save
+-- checking invariants after every operation (~1,500 checks). The round-trip
+is the one that caught `migrateChar` dropping `wear` and `choice` on load. Screenshots need
 `--screenshot=<absolute path>` and `transition:none` injected first.
