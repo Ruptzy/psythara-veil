@@ -56,11 +56,14 @@ and support close the rest.
 - A bound familiar keeps `tpl`; its attacks, specials and traits are read live
   from `FAMILIAR_TEMPLATES`, and its card is generated from that payload.
 - Every activatable is on the **cooldown** system: `cdImpact()` computes the
-  lockout from the payload (base 2; a buff locks for its own duration;
-  control text locks 3; cap 4) — never type a cooldown by hand. Three gates
-  cover the game: `wSp`, `useInnate`, `famSpecial`; recharge specials are
-  exempt (already dice-gated). State is `c.cds` / `f.cds` (`{r,label}`),
-  ticked in `endRound`, cleared by Reset to Rd 1 and cryo.
+  lockout from the payload as **duration + dark gap** (buff rounds count as
+  active time; gap base 2, control 3, heavy 3, capped 4 — mythic tier
+  `rar>=5` pays +3 on the gap, capped 8) — never type a cooldown by hand.
+  `wSpCd(M,s)` is the shared item formula: the `wSp` gate and the magazine
+  chips both call it. Three gates cover the game: `wSp`, `useInnate`,
+  `famSpecial`; recharge specials are exempt (already dice-gated); medical
+  consumables have no specials and stay clean. State is `c.cds` / `f.cds`
+  (`{r,label}`), ticked in `endRound`, cleared by Reset to Rd 1 and cryo.
 - Timed things announce their own death: `FX_EXIT` (named lines) /
   `FX_EXIT_KIND` (pools) / generic templates, drained through `expQueue()`
   into the `ALERTS.fxGone` card. A new timed buff with personality gets a
