@@ -27,6 +27,22 @@ adjudicates enemies, positioning and cover.
   payload is the bug. Dual Vipers shipped `dmg:'4d8'` per shot against a card
   saying "2d8 each" — 36/turn at ★3 against a ★3 band of 18–22. Check the
   ladder before "correcting" text to match an engine value.
+
+## The rarity ladder
+
+Compare weapons on **effective damage a turn** — raw dice × how often it lands
+÷ turns it costs to fire — not on dice. Hit rates: normal 0.65, armour-piercing
+0.85, save-for-half 0.75, auto-hit 1.0, disadvantage ×0.66, jams ×0.95. The
+Railgun skips your next turn and Gunsol charges a round, so both are half what
+their dice suggest. Separate **sustained** (repeatable) from **burst** (≤4 uses
+a mission); burst sits above the band on purpose.
+
+Bands, anchored on the ★3 median and stepping ~1.7× a star:
+★2 8 · ★3 13.7 · ★4 23 · ★5 39 effective a turn. Mythics also pay the wear tax
+(up to −45% damage), so ~0.87× of band is the right resting place for them.
+Deliberate exceptions: the GLOO Cannon reads 4.3 because it is a control
+weapon, and grenades read high because three uses a mission is their cost.
+The analysis lives in scratchpad `balance3.js`.
 - Panel art scales with `background-size: cover`, never `100% 100%`.
 - `MECH` entries contain `sp:[...]` — any parser must count brackets AND braces.
 - One physical item grants its passive once (`oncePer` dedupe) and wears once
