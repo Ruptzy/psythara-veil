@@ -30,19 +30,21 @@ adjudicates enemies, positioning and cover.
 
 ## The rarity ladder
 
-Compare weapons on **effective damage a turn** — raw dice × how often it lands
-÷ turns it costs to fire — not on dice. Hit rates: normal 0.65, armour-piercing
-0.85, save-for-half 0.75, auto-hit 1.0, disadvantage ×0.66, jams ×0.95. The
-Railgun skips your next turn and Gunsol charges a round, so both are half what
-their dice suggest. Separate **sustained** (repeatable) from **burst** (≤4 uses
-a mission); burst sits above the band on purpose.
+The scale now lives IN the file: `BK_LADDER` (sustained effective damage a
+turn, step 1.6x: *2 8.4 · *3 13.5 · *4 21.6 · *5 34.5), `BK_SP_CEIL` (burst
+raw-dice ceilings: *2 24 · *3 34 · *4 56 · *5 open) and `weaponEff()` (raw ×
+hit-rate ÷ turn cost; auto-hit 1.0, pierce 0.85, save-half 0.75, hit 0.65,
+disadvantage ×0.66, jam ×0.95; `BK_TURNCOST` for the Railgun and Gunsol).
+The audit rule "the rarity ladder holds" enforces both, and `bkPowerSort()`
+reorders the catalog weakest→strongest at load — the book reprints itself
+after any rebalance.
 
-Bands, anchored on the ★3 median and stepping ~1.7× a star:
-★2 8 · ★3 13.7 · ★4 23 · ★5 39 effective a turn. Mythics also pay the wear tax
-(up to −45% damage), so ~0.87× of band is the right resting place for them.
-Deliberate exceptions: the GLOO Cannon reads 4.3 because it is a control
-weapon, and grenades read high because three uses a mission is their cost.
-The analysis lives in scratchpad `balance3.js`.
+A weapon whose value is not damage carries `offScale:'control'` (etc.) naming
+why — the GLOO Cannon is the standing example. Burst weapons (≤4 uses a
+mission) sit above band on purpose. Familiars: an attack turn is worth ~60%
+of the band of its tier (fam levels 1–3 ≈ *2, 4–7 ≈ *3, 8–10 ≈ *4); specials
+and support close the rest.
+
 - Panel art scales with `background-size: cover`, never `100% 100%`.
 - `MECH` entries contain `sp:[...]` — any parser must count brackets AND braces.
 - One physical item grants its passive once (`oncePer` dedupe) and wears once

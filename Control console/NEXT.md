@@ -26,6 +26,10 @@ Steps, per weapon:
 3. Add to `WEAPON_IDS`; mythics also get `MY_FAULTS` (4 faults) and `rar:5`.
 4. Settings → Run Consistency Audit. The card text must match the payload.
 
+The scale is now code: `BK_LADDER` bands, `BK_SP_CEIL` burst ceilings, and
+the audit's "rarity ladder holds" rule. A new weapon that lands out of band is
+a finding at boot, and `bkPowerSort()` slots its catalog page automatically.
+
 Worth deciding first: do any of the 20 want a **non-linear rank ladder**
 (e.g. +15% / +25%)? `per` is linear only. That is an engine feature, not a
 prose fix — say so and I will build it before the weapons that need it.
