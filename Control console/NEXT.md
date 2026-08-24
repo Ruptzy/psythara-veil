@@ -87,6 +87,14 @@ Still to do:
   `AUDIT_UNITS` line when it starts to matter; they are listed on the report.
 - **Dual Vipers** now pays 2d8 × 2 = 18/turn (was 36). If the pistols feel
   flat in play, that is the place to look — but the ladder says 18 is right.
+- **Gravemind Serum (#68)** carries mythic risk language but its `MY_FAULTS`
+  hooks are dead — a consumable never degrades. Proposed ruling: one fault
+  roll on use (it is a one-shot; the gamble IS the drawback). Needs your call
+  before it gets automated.
+- **FIDO** — four portraits are in `Sargasso Station\Familiars\`, no stat
+  block yet. One `FAMILIAR_TEMPLATES` row + `unlocks[]` once you paste it.
+- **Familiar level-up art** — `FAM_LEVELUP_ART` is an empty placeholder;
+  the alert says "ART PLATE TO FOLLOW" until you hand me the plate.
 
 ## 5. Yours
 

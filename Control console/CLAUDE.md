@@ -55,6 +55,16 @@ and support close the rest.
   Temp HP is one pool with one timer (`hp.tempRounds`); it fades at End Round.
 - A bound familiar keeps `tpl`; its attacks, specials and traits are read live
   from `FAMILIAR_TEMPLATES`, and its card is generated from that payload.
+- Every activatable is on the **cooldown** system: `cdImpact()` computes the
+  lockout from the payload (base 2; a buff locks for its own duration;
+  control text locks 3; cap 4) — never type a cooldown by hand. Three gates
+  cover the game: `wSp`, `useInnate`, `famSpecial`; recharge specials are
+  exempt (already dice-gated). State is `c.cds` / `f.cds` (`{r,label}`),
+  ticked in `endRound`, cleared by Reset to Rd 1 and cryo.
+- Timed things announce their own death: `FX_EXIT` (named lines) /
+  `FX_EXIT_KIND` (pools) / generic templates, drained through `expQueue()`
+  into the `ALERTS.fxGone` card. A new timed buff with personality gets a
+  line in `FX_EXIT`; everything else falls through to the generics.
 
 ## Patch-script discipline
 
@@ -70,7 +80,8 @@ Write tool.
 ## Verification
 
 Headless Chrome probes: scratchpad `runprobe.py <probe.js>` injects a script
-that reports via `document.title`. Fifteen suites, 242 checks, including
+that reports via `document.title`. Nineteen suites (probe179–197), ~320
+checks, including
 sabotage tests that inject drift and assert the audit catches it; a stress
 fuzzer (probe189) that hammers every funnel with garbage, fires every special,
 buys every node, tries every species x class, and round-trips a save —
