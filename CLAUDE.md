@@ -11,7 +11,9 @@ Read it before touching anything.
 
 | Path | What it is |
 |---|---|
-| `Control console/psythara-operative-console.html` | The live character sheet. Single file, ~14 MB, no build step — open it in a browser. |
+| `Control console/psythara-operative-console.html` | The live character sheet. Single file, ~28 MB, no build step — open it in a browser. |
+| `Control console/weapons-src.js` | Source of truth for weapons added after the original 68. **Edit this, not the console.** |
+| `Control console/inject-weapons.py` | Writes `weapons-src.js` into the console (`MECH`, `BOOK`, `WEAPON_IDS`, `MY_FAULTS`). Idempotent; refuses to write anything off the rarity ladder. |
 | `Control console/portfolio/` | Trimmed public-facing copy + writeup. Not the working version. |
 | `Into the Psythara Veil/*.md` | Rules design docs — see below. |
 | `Into the Psythara Veil/Game Guides/` | Player-facing `.docx` guides (Player Guide, Classes, Species List, Armor). |
@@ -19,7 +21,13 @@ Read it before touching anything.
 
 Design docs worth reading before a change: `SKILL-TREE-RULEBOOK.md`,
 `CLASS-DESIGN.md`, `CLASS-BRANCHES.md`, `SPECIES-DESIGN.md`, `SPECIES-VEINS.md`,
-`VERTICAL-SLICE.md`, `PLAYER-BACKSTORIES.md`.
+`VERTICAL-SLICE.md`, `PLAYER-BACKSTORIES.md`, `ARSENAL-GAPS.md`.
+
+**Adding a weapon?** `ARSENAL-GAPS.md` is the audit of what the arsenal is
+missing and why — read it before inventing a slot. Then add the weapon to
+`Control console/weapons-src.js` and run `inject-weapons.py`. Never hand-edit a
+`MECH` or `BOOK` weapon entry in the console; the injector owns that block and
+will overwrite it.
 
 **Not in git** (too large; they live on the desktop and on `D:\`): Dungeon Draft
 asset packs, `Pictures/`, `Videos/`, `Sound effects for DnD/`, the two

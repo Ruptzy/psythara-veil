@@ -7,8 +7,25 @@ check, the save round-trip, and the routing map in CLAUDE.md.
 
 ## 1. More weapons  (your first ask)
 
-The 20 proposed weapons from the damage analysis were scoped but never built.
-The guardrails make this safe now — a new `MECH` entry is audited the moment
+**Partly done, 2026-08-27 — 24 weapons landed.** See
+`Into the Psythara Veil/ARSENAL-GAPS.md` for the audit of what the arsenal was
+missing, what those 24 closed, and what is still open. They are defined in
+`Control console/weapons-src.js` and written in by `inject-weapons.py`; edit the
+source file and re-run it rather than touching the console.
+
+That batch closed the shotgun and LMG holes, the empty ★1 rung, the missing ★4
+melee slot, the marksman range band and the single-sidearm gap. It did **not**
+add a single new damage type, and it made the stat spread worse — 24 guns are
+24 DEX weapons, so DEX went 13 → 34 while WIS stayed at 1 and CHA at 0. Caster
+arms are now the load-bearing gap.
+
+**The 20 proposed weapons from the damage analysis are still not on disk.** That
+list exists only on the desktop machine; `ARSENAL-GAPS.md` is a reconstruction
+derived from the code, not that list. When the desktop is reachable, commit the
+original and diff the two — anything on it that is not in the reconstruction is
+design intent the code does not express.
+
+The guardrails make this safe — a new `MECH` entry is audited the moment
 it exists, and a mythic needs a `MY_FAULTS` entry or the audit flags it.
 
 Per-turn damage bands the ladder settled on (average, all shots):
