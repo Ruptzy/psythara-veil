@@ -57,7 +57,7 @@ export const NEW_WEAPONS = [
        t:'On a failed STR save the target is knocked prone.'}] },
 
 { id:71, name:'Aureole', tag:'Pistol', art:'Aureole Pistol Dnd.png',
-  rar:1, atk:['DEX'], dmg:'2d8', shots:1, dtype:'energy', rng:'50/150 ft', hands:1,
+  rar:1, atk:['DEX','CHA'], dmg:'2d8', shots:1, dtype:'energy', rng:'50/150 ft', hands:1,
   role:'Close support sidearm — clean, quick, forgiving.',
   flavour:'A service pulse pistol with no bad habits and no surprises.',
   sp:[{n:'Pulse Chain', rest:'short', u:1, dmg:'2d6', shots:2,
@@ -74,7 +74,7 @@ export const NEW_WEAPONS = [
          'or construct, roll 5d8 instead.'}] },
 
 { id:73, name:'Needler', tag:'Pistol', art:'Needler psitol dnd.png',
-  rar:2, atk:['DEX'], dmg:'2d8', shots:2, dtype:'force', rng:'30/90 ft', hands:1,
+  rar:2, atk:['DEX','INT'], dmg:'2d8', shots:2, dtype:'force', rng:'30/90 ft', hands:1,
   role:'Shard pistol — stacks slivers in a target, then detonates them.',
   flavour:'The shards keep travelling after they land. That is the point.',
   sp:[{n:'Supercombine', rest:'long', u:1, save:{st:'CON', dmg:'3d8', half:1, area:'10 ft'},
@@ -96,7 +96,7 @@ export const NEW_WEAPONS = [
        t:'A single aimed round. On a hit the target is pushed 10 ft.'}] },
 
 { id:76, name:'Kestrel', tag:'Grenade Launcher', art:'Grenade launcher kestrel dnd.png',
-  rar:2, atk:['DEX'], dmg:'3d8', shots:1, dtype:'fire', rng:'60/180 ft', hands:2,
+  rar:2, atk:['DEX','WIS'], dmg:'3d8', shots:1, dtype:'fire', rng:'60/180 ft', hands:2,
   role:'Light launcher — area damage without the Obliterator on your back.',
   flavour:'A breech-loaded tube for people who want a blast radius and still '+
           'want to run afterwards.',
@@ -106,14 +106,14 @@ export const NEW_WEAPONS = [
 /* ============ RARITY 3 — RARE ====================================== */
 
 { id:77, name:'Maddox', tag:'SMG', art:'Maddox SMG dnd.png',
-  rar:3, atk:['DEX'], dmg:'3d6', shots:2, dtype:'energy', rng:'40/120 ft', hands:2,
+  rar:3, atk:['DEX','STR'], dmg:'3d6', shots:2, dtype:'energy', rng:'40/120 ft', hands:2,
   role:'Saturation SMG — relentless pressure at close range.',
   flavour:'Empties fast, reloads faster, and asks nothing of your aim.',
   sp:[{n:'Saturate', rest:'long', u:1, save:{st:'DEX', dmg:'6d6', half:1, area:'15 ft cone'},
        t:'Empty the magazine into a cone. Failed DEX save takes it all.'}] },
 
 { id:78, name:'Ak', tag:'Assault Rifle', art:'Ak AR Dnd.png',
-  rar:3, atk:['DEX'], dmg:'4d10', shots:1, dtype:'fire', rng:'80/240 ft', hands:2,
+  rar:3, atk:['DEX','STR'], dmg:'4d10', shots:1, dtype:'fire', rng:'80/240 ft', hands:2,
   role:'Frontline rifle — burns through cover and keeps burning.',
   flavour:'Crude, hot, and it has never once failed to fire.',
   sp:[{n:'Cinderburn', rest:'long', u:1, dmg:'5d10',
@@ -128,7 +128,7 @@ export const NEW_WEAPONS = [
        t:'Two aimed shots as one action. If both hit, the second crits on 19-20.'}] },
 
 { id:80, name:'R301', tag:'Assault Rifle', art:'R301 AR Dnd.png',
-  rar:3, atk:['DEX'], dmg:'3d8', shots:2, dtype:'ballistic', rng:'100/300 ft', hands:2,
+  rar:3, atk:['DEX','WIS'], dmg:'3d8', shots:2, dtype:'ballistic', rng:'100/300 ft', hands:2,
   role:'Marksman-pattern AR — reaches further than a rifle should.',
   flavour:'Long receiver, stabilised rail. Built for the shot after the one '+
           'that gave you away.',
@@ -136,7 +136,7 @@ export const NEW_WEAPONS = [
        t:'Two shots at long range with no disadvantage, each ignoring half cover.'}] },
 
 { id:81, name:'Aa-12', tag:'Shotgun', art:'Aa-12 Shotgun Dnd.png',
-  rar:3, atk:['DEX'], dmg:'3d6', shots:2, dtype:'ballistic', rng:'20/60 ft', hands:2,
+  rar:3, atk:['STR','DEX'], dmg:'3d6', shots:2, dtype:'ballistic', rng:'20/60 ft', hands:2,
   role:'Automatic shotgun — volume of fire instead of aim.',
   flavour:'Drum-fed and fully automatic. The frame was not designed for this '+
           'and the handling shows it.',
@@ -144,7 +144,7 @@ export const NEW_WEAPONS = [
        t:'Three shells in one action, each rolled separately, all at -2 to hit.'}] },
 
 { id:82, name:'PK', tag:'Shotgun', art:'Pk shotgun DnD.png',
-  rar:3, atk:['DEX'], dmg:'5d8', shots:1, dtype:'lightning', rng:'30/90 ft', hands:2, pen:1,
+  rar:3, atk:['DEX','INT'], dmg:'5d8', shots:1, dtype:'lightning', rng:'30/90 ft', hands:2, pen:1,
   role:'Rail shotgun — a slug that does not care what is in the way.',
   flavour:'One rail, one slug, and a high-energy warning stencilled on the '+
           'receiver for a reason.',
@@ -188,7 +188,7 @@ export const NEW_WEAPONS = [
          'knocked prone.'}] },
 
 { id:86, name:'DMR', tag:'Marksman Rifle', art:'DMR.png',
-  rar:4, atk:['DEX'], dmg:'6d10', shots:1, dtype:'energy', rng:'200/600 ft', hands:2,
+  rar:4, atk:['DEX','WIS'], dmg:'6d10', shots:1, dtype:'energy', rng:'200/600 ft', hands:2,
   role:'Precision rifle — the band between assault rifle and sniper.',
   flavour:'Semi-automatic, heavy barrel. Fills the gap nothing else in the '+
           'armoury covers.',
@@ -198,7 +198,7 @@ export const NEW_WEAPONS = [
        t:'On a kill, immediately fire again at another target within 60 ft.'}] },
 
 { id:87, name:'Glasswing', tag:'Sniper', art:'Glasswing sniper dnd.png',
-  rar:4, atk:['DEX'], dmg:'5d10', shots:1, dtype:'radiant', rng:'400/1200 ft', hands:2, pen:1,
+  rar:4, atk:['WIS','DEX'], dmg:'5d10', shots:1, dtype:'radiant', rng:'400/1200 ft', hands:2, pen:1,
   role:'Phase sniper — clarity through distance, and through walls.',
   flavour:'A tightly phased lance. High penetration, minimal dispersion, and a '+
           'charge time you learn to count.',
@@ -220,7 +220,7 @@ export const NEW_WEAPONS = [
          'to you until the end of its next turn.'}] },
 
 { id:89, name:'Sax 42', tag:'LMG', art:'sax 42 LMG dnd.png',
-  rar:4, atk:['DEX'], dmg:'3d10', shots:3, dtype:'energy', rng:'120/360 ft', hands:2,
+  rar:4, atk:['STR','WIS'], dmg:'3d10', shots:3, dtype:'energy', rng:'120/360 ft', hands:2,
   role:'Area suppression — anchors a battleline and denies ground.',
   flavour:'A smart-feed drum keeps the discharge stable for as long as you '+
           'hold the trigger.',

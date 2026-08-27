@@ -137,7 +137,22 @@ def avg(x):
     return tot
 
 
-def validate(ws):
+def baked_plates():
+    """id -> the data: URI already sitting in the console, if any.
+
+    Lets either machine re-run the injector for a numbers-only change: the
+    art is already embedded, so the source PNG is only needed the first time
+    a weapon is added, or when its art actually changes."""
+    try:
+        html = open(CONSOLE, encoding='utf-8').read()
+    except OSError:
+        return {}
+    return {int(m.group(1)): m.group(2)
+            for m in re.finditer(r'\{"k": "item", "n": (\d+),.{0,400}?"img": "(data:[^"]+)"', html, re.S)}
+
+
+def validate(ws, baked=None):
+    baked = baked or {}
     problems, seen = [], set()
     for w in ws:
         nm, rar = w['name'], int(w['rar'])
@@ -148,7 +163,9 @@ def validate(ws):
             problems.append('%s: id %d collides with the original catalog'
                             % (nm, w['id']))
         if not os.path.exists(os.path.join(ART_DIR, w['art'])):
-            problems.append('%s: art not found -- %s' % (nm, w['art']))
+            if w['id'] not in baked:
+                problems.append('%s: art not found and no plate in the console -- %s'
+                                % (nm, w['art']))
         if not w.get('offScale') and w.get('dmg'):
             mult = 0.85 if w.get('pen') else 0.65
             eff = avg(w['dmg']) * int(w.get('shots', 1)) * mult
@@ -241,7 +258,8 @@ def main():
     ws = load_src()
     print('parsed %d weapons from weapons-src.js' % len(ws))
 
-    probs = validate(ws)
+    baked = baked_plates()
+    probs = validate(ws, baked)
     if probs:
         print('\nREFUSING TO WRITE -- %d problem(s):' % len(probs))
         for p in probs:
@@ -254,11 +272,16 @@ def main():
     shutil.copyfile(CONSOLE, CONSOLE + '.bak')
 
     # ---- art -------------------------------------------------------------
-    uris, art_bytes = {}, 0
+    uris, art_bytes, reused = {}, 0, 0
     for w in ws:
-        uris[w['id']], n = art_uri(w['art'])
-        art_bytes += n
-    print('art: %d images, %.2f MB embedded' % (len(ws), art_bytes * 4 / 3.0 / 1048576))
+        if os.path.exists(os.path.join(ART_DIR, w['art'])):
+            uris[w['id']], n = art_uri(w['art'])
+            art_bytes += n
+        else:
+            uris[w['id']] = baked[w['id']]          # validate() proved it is there
+            reused += 1
+    print('art: %d fresh, %d reused from the console, %.2f MB embedded'
+          % (len(ws) - reused, reused, art_bytes * 4 / 3.0 / 1048576))
 
     # ---- MECH ------------------------------------------------------------
     i = s.index('const MECH=')
