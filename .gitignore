@@ -29,3 +29,6 @@ Thumbs.db
 desktop.ini
 Desktop.ini
 .DS_Store
+
+# injector backup — 28 MB, never commit
+*.html.bak
