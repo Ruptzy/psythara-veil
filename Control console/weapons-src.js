@@ -89,7 +89,7 @@ export const NEW_WEAPONS = [
        t:'A three-round burst into one target, each round rolling to hit separately.'}] },
 
 { id:75, name:'Wingy', tag:'Hand Cannon', art:'Wingy Pistol Dnd.png',
-  rar:2, atk:['DEX','STR'], dmg:'4d8', shots:1, dtype:'ballistic', rng:'50/150 ft', hands:1,
+  rar:2, atk:['CHA'], dmg:'4d8', shots:1, dtype:'ballistic', rng:'50/150 ft', hands:1,
   role:'Hand cannon — one heavy round, and you had better mean it.',
   flavour:'Six chambers, no burst, and a recoil that decides your next turn for you.',
   sp:[{n:'Hammerfall', rest:'short', u:2, dmg:'5d8',
@@ -106,14 +106,14 @@ export const NEW_WEAPONS = [
 /* ============ RARITY 3 — RARE ====================================== */
 
 { id:77, name:'Maddox', tag:'SMG', art:'Maddox SMG dnd.png',
-  rar:3, atk:['DEX','STR'], dmg:'3d6', shots:2, dtype:'energy', rng:'40/120 ft', hands:2,
+  rar:3, atk:['STR'], dmg:'3d6', shots:2, dtype:'energy', rng:'40/120 ft', hands:2,
   role:'Saturation SMG — relentless pressure at close range.',
   flavour:'Empties fast, reloads faster, and asks nothing of your aim.',
   sp:[{n:'Saturate', rest:'long', u:1, save:{st:'DEX', dmg:'6d6', half:1, area:'15 ft cone'},
        t:'Empty the magazine into a cone. Failed DEX save takes it all.'}] },
 
 { id:78, name:'Ak', tag:'Assault Rifle', art:'Ak AR Dnd.png',
-  rar:3, atk:['DEX','STR'], dmg:'4d10', shots:1, dtype:'fire', rng:'80/240 ft', hands:2,
+  rar:3, atk:['STR'], dmg:'4d10', shots:1, dtype:'fire', rng:'80/240 ft', hands:2,
   role:'Frontline rifle — burns through cover and keeps burning.',
   flavour:'Crude, hot, and it has never once failed to fire.',
   sp:[{n:'Cinderburn', rest:'long', u:1, dmg:'5d10',
@@ -128,7 +128,7 @@ export const NEW_WEAPONS = [
        t:'Two aimed shots as one action. If both hit, the second crits on 19-20.'}] },
 
 { id:80, name:'R301', tag:'Assault Rifle', art:'R301 AR Dnd.png',
-  rar:3, atk:['DEX','WIS'], dmg:'3d8', shots:2, dtype:'ballistic', rng:'100/300 ft', hands:2,
+  rar:3, atk:['WIS'], dmg:'3d8', shots:2, dtype:'ballistic', rng:'100/300 ft', hands:2,
   role:'Marksman-pattern AR — reaches further than a rifle should.',
   flavour:'Long receiver, stabilised rail. Built for the shot after the one '+
           'that gave you away.',
@@ -153,7 +153,7 @@ export const NEW_WEAPONS = [
          'each rolls its own attack against it.'}] },
 
 { id:83, name:'Flail', tag:'Melee', art:'Flail Melee DnD.png',
-  rar:3, atk:['STR','DEX'], dmg:'4d10', shots:1, dtype:'lightning', rng:'melee, 10 ft chain', hands:1,
+  rar:3, atk:['DEX','CHA'], dmg:'4d10', shots:1, dtype:'lightning', rng:'melee, 10 ft chain', hands:1,
   role:'Disruptor flail — the head keeps swinging after the arc lands.',
   flavour:'The tether is arc, not chain, and it jumps to whatever is closest '+
           'when it breaks.',
@@ -180,7 +180,7 @@ export const NEW_WEAPONS = [
          'and structures.'}] },
 
 { id:85, name:'Mastiff', tag:'Shotgun', art:'Mastiff SHOTGUN DnD.png',
-  rar:4, atk:['DEX','STR'], dmg:'6d10', shots:1, dtype:'energy', rng:'20/40 ft', hands:2,
+  rar:4, atk:['STR','CHA'], dmg:'6d10', shots:1, dtype:'energy', rng:'20/40 ft', hands:2,
   role:'Close-quarters shotgun — devastating inside 20 ft, useless past it.',
   flavour:'Throws a fixed star pattern. There is no choke and no apology.',
   sp:[{n:'Point Blank', rest:'short', u:2, dmg:'8d10',
@@ -230,7 +230,7 @@ export const NEW_WEAPONS = [
          'anything crossing it rolls the save again.'}] },
 
 { id:90, name:'Arc 07', tag:'LMG', art:'Arc 07 LMG DnD.png',
-  rar:4, atk:['STR','INT'], dmg:'5d10', shots:1, dtype:'lightning', rng:'100/300 ft', hands:2, pen:1,
+  rar:4, atk:['INT'], dmg:'5d10', shots:1, dtype:'lightning', rng:'100/300 ft', hands:2, pen:1,
   role:'Arc projector — sustained fire where others overheat.',
   flavour:'Inductor rails and a heat-siphon housing. Where sparks fall, control '+
           'is claimed.',
